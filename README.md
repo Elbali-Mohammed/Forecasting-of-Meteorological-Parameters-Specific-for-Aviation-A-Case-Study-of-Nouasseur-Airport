@@ -1,18 +1,18 @@
 # Forecasting of Meteorological Parameters Specific for Aviation  
 ### A Case Study of Nouasseur Airport
 
-## 📘 Overview
+##  Overview
 This project was conducted as part of my internship at the **Direction Générale de la Météorologie (DGM)** (Jul–Aug 2025).  
 It focuses on **forecasting aviation-critical meteorological parameters** using data-driven and deep-learning approaches.  
 The case study centers on **Nouasseur Airport (Morocco)**, with the goal of improving short- and medium-term weather predictions to support aviation safety.
 
-## 🎯 Objectives
+##  Objectives
 - Build a **reproducible forecasting pipeline** using **ERA5 hourly reanalysis data** (2016–2024).  
 - Compare **classical statistical methods** with **deep learning architectures**.  
 - Evaluate predictive performance for **temperature (T2M)** and **CAPE** on a held-out test year (2024).  
 - Assess model robustness and operational potential for real-time applications.
 
-## 🧠 Methods & Models
+##  Methods & Models
 ### Theoretical Exploration
 Studied the mathematical foundations and predictive behavior of:
 > ARIMA · SARIMAX · Holt’s Winter · Theta · k-NN · SVR · Random Forest · CNN · LSTM · Encoder–Decoder LSTM · Attention-based Encoder–Decoder
@@ -26,7 +26,7 @@ Only the most relevant models were implemented, tuned, and evaluated:
 
 All models were trained on **2020–2023** and tested on **2024** data.
 
-## 📊 Results Summary
+##  Results Summary
 | Model | Variable | Forecast Horizon | MAE | Key Insight |
 |--------|-----------|------------------|-----|--------------|
 | SARIMAX | T2M | 1-hour | ~6.3 °C | Baseline statistical performance |
@@ -34,9 +34,9 @@ All models were trained on **2020–2023** and tested on **2024** data.
 | Encoder–Decoder LSTM | T2M | 24-hour | ~2.42 °C | Maintains diurnal pattern |
 | Attention LSTM | CAPE | 24-hour | 32.5 → 76.3 J/kg | Captures instability trends |
 
-✅ **Deep learning models significantly outperformed statistical baselines**, particularly for short-term temperature forecasting.
+ **Deep learning models significantly outperformed statistical baselines**, particularly for short-term temperature forecasting.
 
-## 🧩 Data
+##  Data
 - **Source:** ERA5 Reanalysis (ECMWF)  
 - **Coordinates:** Nouasseur Airport (33.37°N, −7.58°W)  
 - **Variables:**  
@@ -49,10 +49,10 @@ All models were trained on **2020–2023** and tested on **2024** data.
 
 > Data can be downloaded via the [Copernicus Climate Data Store (CDS)](https://cds.climate.copernicus.eu/).
 
-## ⚙️ Technologies Used
+##  Technologies Used
 - **Python**  
 - **TensorFlow / Keras** — LSTM & attention models  
 - **Statsmodels** — SARIMAX  
 - **Pandas, NumPy, Matplotlib, Scikit-learn** — preprocessing and analysis  
 
-⭐ *If you find this repository useful, consider starring it — it helps others discover applied deep learning work in meteorology!*
+ *If you find this repository useful, consider starring it — it helps others discover applied deep learning work in meteorology!*
